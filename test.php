@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class MyTest extends TestCase
+class Test extends TestCase
 {
     
     public function testInstanceCalculator()
