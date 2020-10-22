@@ -6,8 +6,11 @@ php:
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
    - echo "before script"
-   - curl -s http://getcomposer.org/installer | php
-   - composer install
+   - wget https://phar.phpunit.de/phpunit.phar
+   - chmod +x phpunit.phar
+   - sudo mv phpunit.phar /usr/local/bin/phpunit
+   - phpunit --version
+   
 #  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;" -U postgres; fi
 #  - if [[ "$DB" == "pgsql" ]]; then psql -c "create database hello_world_test;" -U postgres; fi
 #  - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS hello_world_test;" -uroot; fi
@@ -16,7 +19,7 @@ before_script:
 # use the $DB env variable to determine the phpunit.xml to use
 script:  
     - echo "scripts" #phpunit --configuration phpunit_$DB.xml --coverage-text
-    - /vendor/bin/phpunit
+    - phpunit tests\test.php
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
