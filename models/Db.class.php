@@ -56,7 +56,7 @@ class Db
         # Parcours de l'ensemble des résultats
         # Construction d'un tableau d'objet(s) de la classe Livre
         # Si le tableau est vide, on ne rentre pas dans le while
-	var_dump($ps->fetch());
+	//var_dump($ps->fetch());
         while ($row = $ps->fetch()) {
             $tableau[] = new Livre($row[0],$row[1],$row[2]);
         }
