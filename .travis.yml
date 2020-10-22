@@ -19,8 +19,8 @@ before_script:
 # use the $DB env variable to determine the phpunit.xml to use
 script:  
     - echo "scripts" #phpunit --configuration phpunit_$DB.xml --coverage-text
-    - phpunit tests\test.php
+    - phpunit tests/test.php
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
-  email: "olivier.choquet@vinci.be"
+  #email: "olivier.choquet@vinci.be"
