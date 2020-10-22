@@ -40,6 +40,7 @@ class LivresController{
             # Sélection de tous les livres sous forme de tableau
 		var_dump("coucou");
             $tablivres=$this->_db->select_livres();
+		var_dump($tablivres);
         }
 		
 		# Ecrire ici la vue livres.php
