@@ -18,6 +18,8 @@ function chargerClasse($classe) {
 }
 spl_autoload_register('chargerClasse');
 
+### welcome travis
+
 # Connexion à la db;
 #$db=Db::getInstance();
 
