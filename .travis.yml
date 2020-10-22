@@ -8,8 +8,8 @@ before_script:
    - echo "before script"
    - wget https://phar.phpunit.de/phpunit.phar
    - chmod +x phpunit.phar
-   - sudo mv phpunit.phar /usr/local/bin/phpunit
-   - phpunit --version
+#   - sudo mv phpunit.phar /usr/local/bin/phpunit
+   - ./phpunit --version
    
 #  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;" -U postgres; fi
 #  - if [[ "$DB" == "pgsql" ]]; then psql -c "create database hello_world_test;" -U postgres; fi
@@ -19,7 +19,7 @@ before_script:
 # use the $DB env variable to determine the phpunit.xml to use
 script:  
     - echo "scripts" #phpunit --configuration phpunit_$DB.xml --coverage-text
-    - /usr/local/bin/phpunit test.php
+    - ./phpunit test.php
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
