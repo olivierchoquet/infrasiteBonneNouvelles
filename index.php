@@ -18,7 +18,7 @@ function chargerClasse($classe) {
 }
 spl_autoload_register('chargerClasse');
 
-### welcome travis
+### welcome travis 22222222222222222
 
 # Connexion à la db;
 #$db=Db::getInstance();
