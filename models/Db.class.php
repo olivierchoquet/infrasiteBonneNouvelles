@@ -46,7 +46,7 @@ class Db
             # Le bindValue se charge de quoter proprement les valeurs des variables sql
             $ps->bindValue(':keyword',"%$keyword%");
         } else {
-            $query = 'SELECT * FROM public.livres ORDER BY no DESC';
+            $query = 'SELECT * FROM livres ORDER BY no DESC';
             $ps = $this->_db->prepare($query);
         }
 
