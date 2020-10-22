@@ -2,6 +2,10 @@
 # Prise du temps actuel au début du script
 $time_start = microtime(true);
 
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
 # Définition des variables globales du script
 define('CHEMIN_VUES','views/');
 define('CHEMIN_CONTROLEURS','controllers/');
