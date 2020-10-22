@@ -10,13 +10,7 @@ before_script:
    - chmod +x phpunit.phar
    - sudo mv phpunit.phar phpunit
    - ./phpunit --version
-   
-#  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;" -U postgres; fi
-#  - if [[ "$DB" == "pgsql" ]]; then psql -c "create database hello_world_test;" -U postgres; fi
-#  - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS hello_world_test;" -uroot; fi
 
-# omitting "script:" will default to phpunit
-# use the $DB env variable to determine the phpunit.xml to use
 script:  
     - echo "scripts" #phpunit --configuration phpunit_$DB.xml --coverage-text
     - ./phpunit test.php
