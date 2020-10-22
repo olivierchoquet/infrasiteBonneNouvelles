@@ -3,8 +3,8 @@ class LivresController{
 
     private $_db;
 
-	public function __construct($db) {
-        $this->_db = $db;
+	public function __construct() {
+        $this->_db = Db::getInstance();
 	}
 			
 	public function run(){
