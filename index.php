@@ -15,7 +15,7 @@ function chargerClasse($classe) {
 spl_autoload_register('chargerClasse');
 
 # Connexion à la db;
-$db=Db::getInstance();
+#$db=Db::getInstance();
 
 # Ecriture du header de toutes pages HTML
 require_once(CHEMIN_VUES . 'header.php');
