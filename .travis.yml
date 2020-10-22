@@ -8,7 +8,7 @@ before_script:
    - echo "before script"
    - wget https://phar.phpunit.de/phpunit.phar
    - chmod +x phpunit.phar
-#   - sudo mv phpunit.phar /usr/local/bin/phpunit
+   - sudo mv phpunit.phar phpunit
    - ./phpunit --version
    
 #  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;" -U postgres; fi
