@@ -4,7 +4,7 @@ class LivresController{
     private $_db;
 
 	public function __construct() {
-        $this->_db = Db::getInstance();
+        //$this->_db = Db::getInstance();
 	}
 			
 	public function run(){
@@ -38,7 +38,7 @@ class LivresController{
             $html_motcle=htmlspecialchars($_POST['keyword']); # Protection faille XSS pour l'affichage
         } else {
             # Sélection de tous les livres sous forme de tableau
-            $tablivres=$this->_db->select_livres();
+            $tablivres=Db::getInstance()->select_livres();
         }
 		
 		# Ecrire ici la vue livres.php
