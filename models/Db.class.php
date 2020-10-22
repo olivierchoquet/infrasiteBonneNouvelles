@@ -62,7 +62,7 @@ class Db
             $tableau[] = new Livre($row[0],$row[1],$row[2]);
         }
         # Pour debug : affichage du tableau à renvoyer
-        # var_dump($tableau);
+        var_dump($tableau);
         return $tableau;
     }
 
