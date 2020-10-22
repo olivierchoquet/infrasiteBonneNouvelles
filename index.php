@@ -33,7 +33,7 @@ switch ($_GET['action']) {
         break;
     case 'livres':
         require_once(CHEMIN_CONTROLEURS.'LivresController.php');
-        $controller = new LivresController($db);
+        $controller = new LivresController();
         break;
     case 'contact': # action=contact
         require_once(CHEMIN_CONTROLEURS.'ContactController.php');
