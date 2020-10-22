@@ -7,19 +7,13 @@ class Db
     private function __construct()
     {
         try {
-          $db = parse_url(getenv("DATABASE_URL"));
-	  $this->_db = new PDO("pgsql:" . sprintf(
-    		"host=%s;port=%s;user=%s;password=%s;dbname=%s",
-    		$db["host"],
-    		$db["port"],
-    		$db["user"],
-    		$db["pass"],
-    		ltrim($db["path"], "/")
-	  ));
-		
-	}
-
-     
+            $this->_db = new PDO('mysql:host=localhost;dbname=bdbn;charset=utf8', 'root', '');
+            $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+			$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+        } 
+		catch (PDOException $e) {
+		    die('Erreur de connexion à la base de données : '.$e->getMessage());
+        }
 
 		catch (PDOException $e) {
 		    die('Erreur de connexion à la base de données : '.$e->getMessage());
@@ -62,7 +56,7 @@ class Db
             $tableau[] = new Livre($row[0],$row[1],$row[2]);
         }
         # Pour debug : affichage du tableau à renvoyer
-        var_dump("in select livres");
+        # var_dump($tableau);
         return $tableau;
     }
 
