@@ -1,6 +1,7 @@
 <?php
 class Db
 {
+	# pipeline
     private static $instance = null;
     private $_db;
 
