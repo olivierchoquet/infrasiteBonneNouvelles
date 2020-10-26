@@ -2,6 +2,8 @@
 # Prise du temps actuel au début du script
 $time_start = microtime(true);
 
+# travis
+
 error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
