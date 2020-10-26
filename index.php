@@ -2,7 +2,7 @@
 # Prise du temps actuel au début du script
 $time_start = microtime(true);
 
-# travis dgdf
+# travis dgdf test 2
 
 error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
