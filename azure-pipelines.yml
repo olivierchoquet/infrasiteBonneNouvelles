@@ -21,10 +21,10 @@ steps:
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
     php -version
   displayName: 'Use PHP version $(phpVersion)'
-
-- script: - task: AzureAppServiceSettings@1
+- task: AzureRmWebAppDeployment@4
   inputs:
-    azureSubscription: 'Azure pour les étudiants(1)(06a4eb84-0a90-4944-8466-de6b4c4919fd)'
-    appName: 'tstyPHP'
-    resourceGroupName: 'testgr'
-  displayName: 'composer install'
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure pour les étudiants(06a4eb84-0a90-4944-8466-de6b4c4919fd)'
+    appType: 'webApp'
+    WebAppName: 'tstyPHP'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
